@@ -1,0 +1,244 @@
+***** Luis Angel Santillan Olvera*****
+***** Boom-e ******
+
+ACTUADORES 
+Izq, Der, Arr, Abj y Sck
+SENSORES
+SIzq, SDer, SArr, SAbj, y Sbom
+ACCIONES GENERALES
+Nad y Apa
+REGISTROS
+RINT0, RINT1, RINT2 Y RINT3
+OPERADORES RELACIONALES
+==, <=, >=, !=, <, >
+DESICIÓN
+SI 
+CONTRA 
+FINSI
+
+Boom-e
+
+Boom-e(A)
+
+RINT3 = 0
+PRINCIPAL
+	SI RINT3 == 0 ENTONCES
+		RINT0 = SDer
+		SI RINT0 == 0 ENTONCES 
+			RINT1 = Sbom
+			SI RINT1 == 1 ENTONCES
+				Sck
+			CONTRA
+				Nad
+			FINSI
+			Der
+		CONTRA
+			RINT3 = 1
+			RINT0 = SAbj
+			SI RINT0 == 0 ENTONCES 
+				RINT1 = Sbom
+				SI RINT1 == 1 ENTONCES
+					Sck
+				CONTRA
+					Nad
+				FINSI
+				Abj
+			CONTRA
+				Apa
+			FINSI
+		FINSI
+	CONTRA
+		RINT0 = SIzq
+		SI RINT0 == 0 ENTONCES
+			RINT1 = Sbom
+			SI RINT1 == 1 ENTONCES
+				Sck
+			CONTRA
+				Nad
+			FINSI
+			Izq
+		CONTRA
+			RINT3 = 0
+			RINT0 = SAbj
+			SI RINT0 == 0 ENTONCES 
+				RINT1 = Sbom
+				SI RINT1 == 1 ENTONCES
+					Sck
+				CONTRA
+					Nad
+				FINSI
+				Abj
+			CONTRA
+				Apa
+			FINSI
+		FINSI
+	FINSI
+FINPRINCIPAL
+
+
+Boom-e(B)
+
+RINT2 = 0
+PRINCIPALDOS
+	SI RINT2 == 0 ENTONCES
+		RINT0 = SIzq
+		SI RINT0 == 0 ENTONCES 
+			RINT1 = Sbom
+			SI RINT1 == 1 ENTONCES
+				Sck
+			CONTRA
+				Nad
+			FINSI
+			Izq
+		CONTRA
+			RINT2 = 1
+			RINT0 = SArr
+			SI RINT0 == 0 ENTONCES 
+				RINT1 = Sbom
+				SI RINT1 == 1 ENTONCES
+					Sck
+				CONTRA
+					Nad
+				FINSI
+				Arr
+			CONTRA
+				Apa
+			FINSI
+		FINSI
+	CONTRA
+		RINT0 = SDer
+		SI RINT0 == 0 ENTONCES
+			RINT1 = Sbom
+			SI RINT1 == 1 ENTONCES
+				Sck
+			CONTRA
+				Nad
+			FINSI
+			Der
+		CONTRA
+			RINT2 = 0
+			RINT0 = SArr
+			SI RINT0 == 0 ENTONCES 
+				RINT1 = Sbom
+				SI RINT1 == 1 ENTONCES
+					Sck
+				CONTRA
+					Nad
+				FINSI
+				Arr
+			CONTRA
+				Apa
+			FINSI
+		FINSI
+	FINSI
+FINPRINCIPALDOS
+
+Boom-e(A-B)
+
+RINT2 = 0
+RINT3 = 0
+PRINCIPALTRES
+	SI RINT3 == 0 ENTONCES
+		RINT0 = SDer
+		SI RINT0 == 0 ENTONCES 
+			RINT1 = Sbom
+			SI RINT1 == 1 ENTONCES
+				Sck
+			CONTRA
+				Nad
+			FINSI
+			Der
+		CONTRA
+			RINT3 = 1
+			RINT0 = SAbj
+			SI RINT0 == 0 ENTONCES 
+				RINT1 = Sbom
+				SI RINT1 == 1 ENTONCES
+					Sck
+				CONTRA
+					Nad
+				FINSI
+				Abj
+			CONTRA
+				Apa
+			FINSI
+		FINSI
+	CONTRA
+		RINT0 = SIzq
+		SI RINT0 == 0 ENTONCES
+			RINT1 = Sbom
+			SI RINT1 == 1 ENTONCES
+				Sck
+			CONTRA
+				Nad
+			FINSI
+			Izq
+		CONTRA
+			RINT3 = 0
+			RINT0 = SAbj
+			SI RINT0 == 0 ENTONCES 
+				RINT1 = Sbom
+				SI RINT1 == 1 ENTONCES
+					Sck
+				CONTRA
+					Nad
+				FINSI
+				Abj
+			CONTRA
+				Apa
+			FINSI
+		FINSI
+	FINSI
+	
+	SI RINT2 == 0 ENTONCES
+		RINT0 = SIzq
+		SI RINT0 == 0 ENTONCES 
+			RINT1 = Sbom
+			SI RINT1 == 1 ENTONCES
+				Sck
+			CONTRA
+				Nad
+			FINSI
+			Izq
+		CONTRA
+			RINT2 = 1
+			RINT0 = SArr
+			SI RINT0 == 0 ENTONCES 
+				RINT1 = Sbom
+				SI RINT1 == 1 ENTONCES
+					Sck
+				CONTRA
+					Nad
+				FINSI
+				Arr
+			CONTRA
+				Apa
+			FINSI
+		FINSI
+	CONTRA
+		RINT0 = SDer
+		SI RINT0 == 0 ENTONCES
+			RINT1 = Sbom
+			SI RINT1 == 1 ENTONCES
+				Sck
+			CONTRA
+				Nad
+			FINSI
+			Der
+		CONTRA
+			RINT2 = 0
+			RINT0 = SArr
+			SI RINT0 == 0 ENTONCES 
+				RINT1 = Sbom
+				SI RINT1 == 1 ENTONCES
+					Sck
+				CONTRA
+					Nad
+				FINSI
+				Arr
+			CONTRA
+				Apa
+			FINSI
+		FINSI
+	FINSI
+FINPRINCIPALTRES
